@@ -13,6 +13,8 @@
 		27CC33C429C40A7F007ED376 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CC33C329C40A7F007ED376 /* Preview Assets.xcassets */; };
 		27CC33C629C40A7F007ED376 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC33C529C40A7F007ED376 /* Persistence.swift */; };
 		27CC33C929C40A7F007ED376 /* Enroute.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27CC33C729C40A7F007ED376 /* Enroute.xcdatamodeld */; };
+		27CC33D129C40D1F007ED376 /* FlightsEnrouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC33D029C40D1F007ED376 /* FlightsEnrouteView.swift */; };
+		27CC33D529C41138007ED376 /* FlightAwareRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC33D429C41138007ED376 /* FlightAwareRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,9 @@
 		27CC33C329C40A7F007ED376 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27CC33C529C40A7F007ED376 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		27CC33C829C40A7F007ED376 /* Enroute.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Enroute.xcdatamodel; sourceTree = "<group>"; };
+		27CC33D029C40D1F007ED376 /* FlightsEnrouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsEnrouteView.swift; sourceTree = "<group>"; };
+		27CC33D229C4109C007ED376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		27CC33D429C41138007ED376 /* FlightAwareRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAwareRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +60,10 @@
 		27CC33BB29C40A7E007ED376 /* Enroute */ = {
 			isa = PBXGroup;
 			children = (
+				27CC33D329C41116007ED376 /* FlightAware */,
 				27CC33BC29C40A7E007ED376 /* EnrouteApp.swift */,
-				27CC33BE29C40A7E007ED376 /* ContentView.swift */,
-				27CC33C029C40A7F007ED376 /* Assets.xcassets */,
-				27CC33C529C40A7F007ED376 /* Persistence.swift */,
-				27CC33C729C40A7F007ED376 /* Enroute.xcdatamodeld */,
-				27CC33C229C40A7F007ED376 /* Preview Content */,
+				27CC33D029C40D1F007ED376 /* FlightsEnrouteView.swift */,
+				27CC33CF29C40CFC007ED376 /* Supporting Files */,
 			);
 			path = Enroute;
 			sourceTree = "<group>";
@@ -71,6 +74,27 @@
 				27CC33C329C40A7F007ED376 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		27CC33CF29C40CFC007ED376 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27CC33D229C4109C007ED376 /* Info.plist */,
+				27CC33C229C40A7F007ED376 /* Preview Content */,
+				27CC33C529C40A7F007ED376 /* Persistence.swift */,
+				27CC33C729C40A7F007ED376 /* Enroute.xcdatamodeld */,
+				27CC33C029C40A7F007ED376 /* Assets.xcassets */,
+				27CC33BE29C40A7E007ED376 /* ContentView.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27CC33D329C41116007ED376 /* FlightAware */ = {
+			isa = PBXGroup;
+			children = (
+				27CC33D429C41138007ED376 /* FlightAwareRequest.swift */,
+			);
+			name = FlightAware;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +171,8 @@
 				27CC33BF29C40A7E007ED376 /* ContentView.swift in Sources */,
 				27CC33C929C40A7F007ED376 /* Enroute.xcdatamodeld in Sources */,
 				27CC33BD29C40A7E007ED376 /* EnrouteApp.swift in Sources */,
+				27CC33D529C41138007ED376 /* FlightAwareRequest.swift in Sources */,
+				27CC33D129C40D1F007ED376 /* FlightsEnrouteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +304,7 @@
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Enroute/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -307,6 +334,7 @@
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Enroute/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

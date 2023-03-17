@@ -1,10 +1,3 @@
-//
-//  EnrouteApp.swift
-//  Enroute
-//
-//  Created by Vladimir on 17.03.2023.
-//
-
 import SwiftUI
 
 @main
@@ -13,7 +6,7 @@ struct EnrouteApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FlightsEnrouteView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
