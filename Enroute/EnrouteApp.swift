@@ -2,16 +2,17 @@ import SwiftUI
 
 @main
 struct EnrouteApp: App {
-    let persistenceController = PersistenceController.shared
-
-    
+    let context = PersistenceController.shared.container.viewContext
+    let airport: Airport
+    init() {
+        airport = Airport.withICAO("KSFO", context: context)
+        airport.fetchIncomingFlights()
+    }
     var body: some Scene {
         WindowGroup {
-            FlightsEnrouteView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .onAppear {
-                    print((Bundle.main.object(forInfoDictionaryKey: "FlightAware Credentials") as? String) ?? "")
-                }
+            FlightsEnrouteView(
+                flightSearch: FlightSearch(destination: airport))
+                .environment(\.managedObjectContext, context)
         }
         
     }

@@ -18,8 +18,7 @@ import Combine
 // example credentials: "joepilot:2ab78c93fccc11f999999111030304"
 // if that key does not exist, simulation mode automatically kicks in
 
-class FlightAwareRequest<Fetched> where Fetched: Codable, Fetched: Hashable
-{
+class FlightAwareRequest<Fetched> where Fetched: Codable, Fetched: Hashable {
     // this is the latest accumulation of results from fetches
     // this is a CurrentValueSubject
     // a CurrentValueSubject is a Publisher that holds a value
@@ -167,7 +166,7 @@ class FlightAwareRequest<Fetched> where Fetched: Codable, Fetched: Hashable
         let flightAware = "https://flightxml.flightaware.com/json/FlightXML2/"
         if let url = URL(string: flightAware + query), let credentials = (credentials?.isEmpty ?? true) ? nil : credentials?.base64 {
             var request = URLRequest(url: url)
-            request.setValue("Basic \(credentials)", forHTTPHeaderField: "Authorization")
+            request.addValue(credentials, forHTTPHeaderField: "x-apikey")
             return request
         }
         return nil
